@@ -28,7 +28,7 @@ const station = {
       title: 'Station',
       station: station,
     };
-    response.render('Station', viewData);
+    response.render('station', viewData);
   },
 
   addReadings(request, response) {
