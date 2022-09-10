@@ -1,30 +1,31 @@
 "use strict";
 
 const conversions = {
-  getWeather(code) {
-    let weather = undefined;
+  getWeatherText(code) {
+    let weatherText = undefined;
     if (code == 100) {
-      weather = "Clear";
+      weatherText = "Clear";
     } else if (code == 200) {
-      weather = "Partial clouds";
+      weatherText = "Partial clouds";
     } else if (code == 300) {
-      weather = "Cloudy";
+      weatherText = "Cloudy";
     } else if (code == 400) {
-      weather = "Light showers";
+      weatherText = "Light showers";
     } else if (code == 500) {
-      weather = "Heavy showers";
+      weatherText = "Heavy showers";
     } else if (code == 600) {
-      weather = "Rain";
+      weatherText = "Rain";
     } else if (code == 700) {
-      weather = "Snow";
+      weatherText = "Snow";
     } else if (code == 800) {
-      weather = "Thunder";
+      weatherText = "Thunder";
     }
-    return weather;
+    return weatherText;
   },
 
   getFahrenheit(celsius) {
-    return celsius * 1.8 + 32;
+    let result = celsius * 1.8 + 32;
+    return Math.round(result * 10) / 10;
   },
 
   getBeaufort(speed) {
@@ -55,6 +56,51 @@ const conversions = {
     } else if (speed > 117) {
       return 12;
     }
+  },
+
+  getCompass(bearing) {
+    let direction = "North";
+    if (bearing < 11.25) {
+      direction = "North";
+    } else if (bearing < 33.75) {
+      direction = "North North East";
+    } else if (bearing < 56.25) {
+      direction = "North East";
+    } else if (bearing < 78.75) {
+      direction = "East North East";
+    } else if (bearing < 101.25) {
+      direction = "East";
+    } else if (bearing < 123.75) {
+      direction = "East South East";
+    } else if (bearing < 146.25) {
+      direction = "South East";
+    } else if (bearing < 168.75) {
+      direction = "South South East";
+    } else if (bearing < 191.2) {
+      direction = "South";
+    } else if (bearing < 213.75) {
+      direction = "South South West";
+    } else if (bearing < 236.25) {
+      direction = "South West";
+    } else if (bearing < 258.75) {
+      direction = "West South West";
+    } else if (bearing < 281.25) {
+      direction = "West";
+    } else if (bearing < 303.75) {
+      direction = "West North West";
+    } else if (bearing < 326.25) {
+      direction = "North West";
+    } else if (bearing < 348.75) {
+      direction = "North North West";
+    } else {
+      direction = "North";
+    }
+    return direction;
+  },
+
+  getWindChill(tempC, speed) {
+    let result = (13.12 + (tempC * 0.6215) - (11.37 * (speed ** 0.16)) + (tempC * 0.3965 * (speed ** 0.16)));
+    return Math.round(result * 10) / 10;
   },
 
 }
