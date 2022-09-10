@@ -1,6 +1,5 @@
 "use strict";
 
-const logger = require("../utils/logger");
 const _ = require("lodash");
 
 const stationStore = {
@@ -13,6 +12,15 @@ const stationStore = {
   getStation(id) {
     return _.find(this.stationCollection, { id:id });
   },
+
+  addStation(station) {
+    this.stationCollection.push(station);
+  },
+
+  addReadings(id, readings) {
+    const station = this.getStation(id);
+    station.readings.push(readings);
+  }
 
 }
 module.exports = stationStore;
