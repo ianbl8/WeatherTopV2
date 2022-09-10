@@ -9,7 +9,7 @@
             <!-- ICON for Release 2 -->
           </div>
         </div>
-        <p><span class="ui large text"><strong>{{name}}</strong></span></p>
+        <p><span class="ui large text"><strong>{{station.name}}</strong></span></p>
         <!-- LAT/LONG for Release 2 -->
       </div>
     </div>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <p><span class="ui large text"><strong>Weather</strong></span></p>
-        <p>{{latestReading.weather}}</p>
+        <p>{{#if station.latestReading.weatherText}}{{station.latestReading.weatherText}}{{else}}<em>No readings</em>{{/if}}</p>
       </div>
     </div>
 
@@ -36,7 +36,7 @@
           </div>
         </div>
         <p><span class="ui large text"><strong>Temperature</strong></span></p>
-        <p>{{latestReading.tempC}}°C / {{latestReading.tempF}}°F</p>
+        <p>{{#if station.latestReading.tempC}}{{station.latestReading.tempC}}°C / {{station.latestReading.tempF}}°F{{else}}<em>No readings</em>{{/if}}</p>
         <!-- MIN/MAX for Release 2 -->
       </div>
     </div>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <p><span class="ui large text"><strong>Wind</strong></span></p>
-        <p>{{latestReading.windBft}} bft<!-- WIND DIRECTION for Release 1 --><br><!-- WIND CHILL for Release 1 --></p>
+        <p>{{#if station.latestReading.windBft}}{{station.latestReading.windBft}} bft<br>{{station.latestReading.windCompass}}<br>Feels like {{station.latestReading.windChillC}}°C / {{station.latestReading.windChillF}}°F{{else}}<em>No readings</em>{{/if}}</p>
         <!-- MIN/MAX for Release 2 -->
       </div>
     </div>
@@ -64,7 +64,7 @@
           </div>
         </div>
         <p><span class="ui large text"><strong>Pressure</strong></span></p>
-        <p>{{latestReading.pressure}} hPa</p>
+        <p>{{#if station.latestReading.pressure}}{{station.latestReading.pressure}} hPa{{else}}<em>No readings</em>{{/if}}</p>
         <!-- MIN/MAX for Release 2 -->
       </div>
     </div>

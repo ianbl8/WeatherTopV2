@@ -2,7 +2,8 @@
 
 {{#each stations}}
   <section class="ui segment">
-    {{> latestweather}}
-    {{> listreadings}}
+    <h2>{{name}}</h2>
+    <a href="/station/{{id}}" class="ui icon button"><i class="icon folder open"></i></a>
   </section>
 {{/each}}
+{{> addstation}}
