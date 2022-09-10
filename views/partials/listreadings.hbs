@@ -1,0 +1,32 @@
+<table class="ui fixed table">
+  <thead>
+  <tr>
+    <!-- DATE AND TIME for Release 3
+    <th>Date and time</th>
+    -->
+    <th>Weather code</th>
+    <th>Temperature (°C)</th>
+    <th>Wind speed (km/h)</th>
+    <!-- WIND DIRECTION for Release 1
+    <th>Wind direction (°)</th>
+    -->
+    <th>Pressure (hPa)</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each readings}}
+    <tr>
+      <!-- DATE AND TIME for Release 3
+      <td>(TBC)</td>
+      -->
+      <td>{{code}}</td>
+      <td>{{temperature}}</td>
+      <td>{{windSpeed}}</td>
+      <!-- WIND DIRECTION for Release 1
+      <td>(TBC)</td>
+      -->
+      <td>{{pressure}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

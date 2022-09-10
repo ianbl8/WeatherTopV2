@@ -1,0 +1,72 @@
+<div class="ui five column grid">
+  <div class="stretched row">
+
+    <!-- 1. Station -->
+    <div class="column">
+      <div class="ui inverted segment">
+        <div class="ui grid">
+          <div class="right aligned column">
+            <!-- ICON for Release 2 -->
+          </div>
+        </div>
+        <p><span class="ui large text"><strong>{{name}}</strong></span></p>
+        <!-- LAT/LONG for Release 2 -->
+      </div>
+    </div>
+
+    <!-- 2. Weather -->
+    <div class="column">
+      <div class="ui inverted segment">
+        <div class="ui grid">
+          <div class="right aligned column">
+            <!-- ICON for Release 2 -->
+          </div>
+        </div>
+        <p><span class="ui large text"><strong>Weather</strong></span></p>
+        <p>{{latestReading.weather}}</p>
+      </div>
+    </div>
+
+    <!-- 3. Temperature -->
+    <div class="column">
+      <div class="ui inverted segment">
+        <div class="ui grid">
+          <div class="right aligned column">
+            <!-- ICON for Release 2 -->
+          </div>
+        </div>
+        <p><span class="ui large text"><strong>Temperature</strong></span></p>
+        <p>{{latestReading.tempC}}°C / {{latestReading.tempF}}°F</p>
+        <!-- MIN/MAX for Release 2 -->
+      </div>
+    </div>
+
+    <!-- 4. Wind -->
+    <div class="column">
+      <div class="ui inverted segment">
+        <div class="ui grid">
+          <div class="right aligned column">
+            <!-- ICON for Release 2 -->
+          </div>
+        </div>
+        <p><span class="ui large text"><strong>Wind</strong></span></p>
+        <p>{{latestReading.windBft}} bft<!-- WIND DIRECTION for Release 1 --><br><!-- WIND CHILL for Release 1 --></p>
+        <!-- MIN/MAX for Release 2 -->
+      </div>
+    </div>
+
+    <!-- 5. Pressure -->
+    <div class="column">
+      <div class="ui inverted segment">
+        <div class="ui grid">
+          <div class="right aligned column">
+            <!-- ICON for Release 2 -->
+          </div>
+        </div>
+        <p><span class="ui large text"><strong>Pressure</strong></span></p>
+        <p>{{latestReading.pressure}} hPa</p>
+        <!-- MIN/MAX for Release 2 -->
+      </div>
+    </div>
+  </div>
+</div>
