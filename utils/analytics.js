@@ -89,6 +89,48 @@ const analytics = {
     return minPressure;
   },
 
+  getTrendTemp(stationId) {
+    const station = stationStore.getStation(stationId);
+    let trendTemp = "big black ellipsis horizontal icon";
+    if (station.readings.length > 2) {
+      trendTemp = "big orange ellipsis horizontal icon";
+      if (station.readings[station.readings.length - 1].temperature > station.readings[station.readings.length - 2].temperature && station.readings[station.readings.length - 2].temperature > station.readings[station.readings.length - 3].temperature) {
+        trendTemp = "big orange up arrow icon";
+      } else if (station.readings[station.readings.length - 1].temperature < station.readings[station.readings.length - 2].temperature && station.readings[station.readings.length - 2].temperature < station.readings[station.readings.length - 3].temperature) {
+        trendTemp = "big orange down arrow icon";
+      }
+    }
+    return trendTemp;
+  },
+
+  getTrendWindSpeed(stationId) {
+    const station = stationStore.getStation(stationId);
+    let trendWindSpeed = "big black ellipsis horizontal icon";
+    if (station.readings.length > 2) {
+      trendWindSpeed = "big teal ellipsis horizontal icon";
+      if (station.readings[station.readings.length - 1].windSpeed > station.readings[station.readings.length - 2].windSpeed && station.readings[station.readings.length - 2].windSpeed > station.readings[station.readings.length - 3].windSpeed) {
+        trendWindSpeed = "big teal up arrow icon";
+      } else if (station.readings[station.readings.length - 1].windSpeed < station.readings[station.readings.length - 2].windSpeed && station.readings[station.readings.length - 2].windSpeed < station.readings[station.readings.length - 3].windSpeed) {
+        trendWindSpeed = "big teal down arrow icon";
+      }
+    }
+    return trendWindSpeed;
+  },
+
+  getTrendPressure(stationId) {
+    const station = stationStore.getStation(stationId);
+    let trendPressure = "big black ellipsis horizontal icon";
+    if (station.readings.length > 2) {
+      trendPressure = "big purple ellipsis horizontal icon";
+      if (station.readings[station.readings.length - 1].pressure > station.readings[station.readings.length - 2].pressure && station.readings[station.readings.length - 2].pressure > station.readings[station.readings.length - 3].pressure) {
+        trendPressure = "big purple up arrow icon";
+      } else if (station.readings[station.readings.length - 1].pressure < station.readings[station.readings.length - 2].pressure && station.readings[station.readings.length - 2].pressure < station.readings[station.readings.length - 3].pressure) {
+        trendPressure = "big purple down arrow icon";
+      }
+    }
+    return trendPressure;
+  },
+
 
 }
 
