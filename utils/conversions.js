@@ -23,6 +23,28 @@ const conversions = {
     return weatherText;
   },
 
+  getWeatherIcon(code) {
+    let weatherIcon = undefined;
+    if (code == 100) {
+      weatherIcon = "big yellow sun icon";
+    } else if (code == 200) {
+      weatherIcon = "big cloud sun icon";
+    } else if (code == 300) {
+      weatherIcon = "big grey cloud icon";
+    } else if (code == 400) {
+      weatherIcon = "big yellow cloud sun rain icon";
+    } else if (code == 500) {
+      weatherIcon = "big cloud showers heavy icon";
+    } else if (code == 600) {
+      weatherIcon = "big grey cloud rain icon";
+    } else if (code == 700) {
+      weatherIcon = "big snowflake icon";
+    } else if (code == 800) {
+      weatherIcon = "big yellow bolt icon";
+    }
+    return weatherIcon;
+  },
+
   getFahrenheit(celsius) {
     let result = celsius * 1.8 + 32;
     return Math.round(result * 10) / 10;
