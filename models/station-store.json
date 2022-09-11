@@ -1,82 +1,43 @@
 {
   "stationCollection": [
     {
-      "id": "01",
-      "userid": "3ad52694-6d98-4d80-8273-084de55a86c0",
-      "name": "Tramore",
-      "latitude": 52.16235,
-      "longitude": -7.15244,
-      "readings": [
-        {
-          "id": "02",
-          "code": 800,
-          "temperature": 0.5,
-          "windSpeed": 3.5,
-          "pressure": 1002,
-          "windDirection": 90
-        },
-        {
-          "id": "03",
-          "code": 600,
-          "temperature": 6,
-          "windSpeed": 2,
-          "pressure": 1004,
-          "windDirection": 96
-        },
-        {
-          "id": "04",
-          "code": 700,
-          "temperature": 8,
-          "windSpeed": 1,
-          "pressure": 1005,
-          "windDirection": 101
-        }
-      ]
-    },
-    {
-      "id": "05",
+      "id": "e5d2bb00-31e8-11ed-a9dc-6ffc41b99158",
       "userid": "3ad52694-6d98-4d80-8273-084de55a86c0",
       "name": "Dunmore",
       "latitude": 52.15,
-      "longitude": -6.98333,
+      "longitude": -6.995,
       "readings": [
         {
-          "id": "06",
+          "id": "edbddc50-31e8-11ed-a9dc-6ffc41b99158",
+          "date": "Sun Sep 11 2022 16:46:40 GMT+0100 (Irish Standard Time)",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
-          "pressure": 999,
-          "windDirection": 98
+          "windDirection": 90,
+          "pressure": 1000
         },
         {
-          "id": "07",
+          "id": "f4287820-31e8-11ed-a9dc-6ffc41b99158",
+          "date": "Sun Sep 11 2022 16:46:51 GMT+0100 (Irish Standard Time)",
           "code": 200,
           "temperature": 0.5,
           "windSpeed": 3.5,
-          "pressure": 1000,
-          "windDirection": 102
-        }
-      ]
-    },
-    {
-      "id": "a15207b0-31b6-11ed-8f49-c3e551ba24c6",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "name": "Dublin",
-      "latitude": 53.3498,
-      "longitude": -6.26025,
-      "readings": [
+          "windDirection": 120,
+          "pressure": 999
+        },
         {
-          "id": "cdbbf6d0-31b6-11ed-8f49-c3e551ba24c6",
+          "id": "fd026640-31e8-11ed-a9dc-6ffc41b99158",
+          "date": "Sun Sep 11 2022 16:47:06 GMT+0100 (Irish Standard Time)",
           "code": 200,
-          "temperature": 16,
-          "windSpeed": 9,
-          "windDirection": 285,
-          "pressure": 1013
+          "temperature": 0,
+          "windSpeed": 6,
+          "windDirection": 120,
+          "pressure": 1000
         }
       ],
-      "latestReading": {},
-      "max": {},
-      "min": {}
+      "latestReadings": {},
+      "maxReadings": {},
+      "minReadings": {}
     }
   ]
 }

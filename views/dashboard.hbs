@@ -3,7 +3,11 @@
 {{#each stations}}
   <section class="ui segment">
     <h2>{{name}}</h2>
-    <a href="/station/{{id}}" class="ui icon button"><i class="icon folder open"></i></a>
+    <p>
+      {{> latestweather}}
+    </p>
+    <a href="/station/{{id}}" class="ui icon blue button"><i class="icon folder open"></i></a>
+    <a href="/station/deletestation/:id" class="ui icon red button"><i class="icon trash"></i></a>
   </section>
 {{/each}}
 {{> addstation}}

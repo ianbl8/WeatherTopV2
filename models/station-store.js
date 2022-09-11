@@ -26,9 +26,22 @@ const stationStore = {
     this.store.save();
   },
 
+  removeStation(id) {
+    const station = this.getStation(id);
+    this.store.remove(this.collection, station);
+    this.store.save();
+  },
+
   addReadings(id, readings) {
     const station = this.getStation(id);
     station.readings.push(readings);
+    this.store.save();
+  },
+
+  removeReadings(id, readingsId) {
+    const station = this.getStation(id);
+    const readings = station.readings;
+    _.remove(readings, { id:readingsId });
     this.store.save();
   }
 
