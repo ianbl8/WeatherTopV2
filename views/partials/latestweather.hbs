@@ -6,11 +6,11 @@
       <div class="ui inverted segment">
         <div class="ui grid">
           <div class="right aligned column">
-            <!-- ICON for Release 2 -->
+            <i class = "big blue compass outline icon"></i>
           </div>
         </div>
         <p><span class="ui large text"><strong>{{station.name}}</strong></span></p>
-        <!-- LAT/LONG for Release 2 -->
+        <p>Lat: {{station.latitude}}°<br>Long: {{station.longitude}}°</p>
       </div>
     </div>
 
@@ -19,7 +19,7 @@
       <div class="ui inverted segment">
         <div class="ui grid">
           <div class="right aligned column">
-            <!-- ICON for Release 2 -->
+            {{#if station.latestReading.weatherIcon}}<i class="{{station.latestReading.weatherIcon}}"></i>{{else}}<i class = "big olive umbrella icon"></i>{{/if}}
           </div>
         </div>
         <p><span class="ui large text"><strong>Weather</strong></span></p>
@@ -32,12 +32,12 @@
       <div class="ui inverted segment">
         <div class="ui grid">
           <div class="right aligned column">
-            <!-- ICON for Release 2 -->
+            <i class = "big orange temperature low icon"></i>
           </div>
         </div>
         <p><span class="ui large text"><strong>Temperature</strong></span></p>
-        <p>{{#if station.latestReading.tempC}}{{station.latestReading.tempC}}°C / {{station.latestReading.tempF}}°F{{else}}<em>No readings</em>{{/if}}</p>
-        <!-- MIN/MAX for Release 2 -->
+        <p>{{#if station.latestReading.tempC}}{{station.latestReading.tempC}}°C ({{station.latestReading.tempF}}°F){{else}}<em>No readings</em>{{/if}}</p>
+        <p>{{#if station.max.tempC}}Max {{station.max.tempC}}°C ({{station.max.tempF}}°F)<br>Min {{station.min.tempC}}°C ({{station.min.tempF}}°F){{/if}}</p>
       </div>
     </div>
 
@@ -46,12 +46,12 @@
       <div class="ui inverted segment">
         <div class="ui grid">
           <div class="right aligned column">
-            <!-- ICON for Release 2 -->
+            <i class = "big teal wind icon"></i>
           </div>
         </div>
         <p><span class="ui large text"><strong>Wind</strong></span></p>
-        <p>{{#if station.latestReading.windBft}}{{station.latestReading.windBft}} bft<br>{{station.latestReading.windCompass}}<br>Feels like {{station.latestReading.windChillC}}°C / {{station.latestReading.windChillF}}°F{{else}}<em>No readings</em>{{/if}}</p>
-        <!-- MIN/MAX for Release 2 -->
+        <p>{{#if station.latestReading.windSpeed}}{{station.latestReading.windBft}} bft ({{station.latestReading.windSpeed}} km/h)<br>{{station.latestReading.windCompass}}<br>Feels like {{station.latestReading.windChillC}}°C ({{station.latestReading.windChillF}}°F){{else}}<em>No readings</em>{{/if}}</p>
+        <p>{{#if station.max.windBft}}Max {{station.max.windBft}} bft ({{station.max.windSpeed}} km/h)<br>Min {{station.min.windBft}} bft ({{station.min.windSpeed}} km/h){{/if}}</p>
       </div>
     </div>
 
@@ -60,12 +60,12 @@
       <div class="ui inverted segment">
         <div class="ui grid">
           <div class="right aligned column">
-            <!-- ICON for Release 2 -->
+            <i class = "big purple signal icon"></i>
           </div>
         </div>
         <p><span class="ui large text"><strong>Pressure</strong></span></p>
         <p>{{#if station.latestReading.pressure}}{{station.latestReading.pressure}} hPa{{else}}<em>No readings</em>{{/if}}</p>
-        <!-- MIN/MAX for Release 2 -->
+        <p>{{#if station.max.pressure}}Max {{station.max.pressure}} hPa<br>Min {{station.min.pressure}} hPa{{/if}}</p>
       </div>
     </div>
   </div>
