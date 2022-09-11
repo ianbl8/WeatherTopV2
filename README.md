@@ -1,12 +1,14 @@
 WeatherTop v2
 ==============================
 
-This is WeatherTop v2, Release 1.
+This is WeatherTop v2, Release 2.
 
-This version of the web application displays a dashboard with stations listed, links to each station page, and a section to add readings.
+This version of the web application introduces users, with each station and its readings tied to a specific user. It also introduces persistence, with any new users, stations or readings added to the correct JSON file.
 
-For each station, the latest weather conditions, temperature in degrees Celsius and Fahrenheit, wind speed in the Beaufort scale and pressure in hPa are displayed in the card grid. Wind direction and wind chill have also been added, along with a section to add new readings
+Each user sees a dashboard with their stations listed, links to each station page, and a section to add readings.
 
-All raw readings are taken from the JSON file and displayed in a table below the latest readings on the station pages, comprising the code, temperature in degrees Celsius, wind speed in km/h, wind direction in degrees and pressure in hPa.
+For each station, the latest weather conditions, temperature, wind speed and direction, and pressure are displayed in the card grid. Where there are multiple readings for a station, maximum and minimum readings are displayed.
 
-This version is deployed on Glitch at https://honeysuckle-mountainous-hoverfly.glitch.me/
+New users can sign up and log in. New stations can be created and new readings can be entered. All new user data is saved to _user-store.json_ and all new stations and readings are saved to _station-store.json_, linked to their owner.
+
+This version is deployed on Glitch at https://buttery-juvenile-armadillo.glitch.me/
